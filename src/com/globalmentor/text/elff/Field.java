@@ -1,4 +1,4 @@
-package com.garretwilson.text.elff;
+package com.globalmentor.text.elff;
 
 import static com.globalmentor.java.Objects.checkInstance;
 

@@ -1,4 +1,4 @@
-package com.garretwilson.text.elff;
+package com.globalmentor.text.elff;
 
 /**WebTrends-specific logging information.
 @author Garret Wilson

@@ -1,4 +1,4 @@
-package com.garretwilson.text.elff;
+package com.globalmentor.text.elff;
 
 import java.io.*;
 import java.net.*;

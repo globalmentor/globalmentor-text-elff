@@ -1,4 +1,4 @@
-package com.garretwilson.text.elff;
+package com.globalmentor.text.elff;
 
 /**The type of an individual field in an entry of the Extended Log File Format (ELFF).
 @author Garret Wilson

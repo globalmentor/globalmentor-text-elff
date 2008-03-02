@@ -1,4 +1,4 @@
-package com.garretwilson.text.elff;
+package com.globalmentor.text.elff;
 
 /**An enumeration encapsulating the WebTrends true/false values.
 The string representation of this enumeration is that expected by WebTrends log files.
