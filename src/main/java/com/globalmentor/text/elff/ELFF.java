@@ -106,6 +106,7 @@ public class ELFF {
 	 * resulting in duplicating if any of those directives are specified here. The {@value #VERSION_DIRECTIVE}, {@value #DATE_DIRECTIVE}, and
 	 * {@value #FIELDS_DIRECTIVE} directives are always written, resulting in duplication if any of these directives are specified.
 	 * @param directives The names and values of the directives to write.
+	 * @throws IOException Thrown if an I/O error occurred.
 	 * @return A string representing the given directives.
 	 */
 	public String serializeDirectives(final NameValuePair<String, String>... directives) throws IOException {
@@ -147,6 +148,7 @@ public class ELFF {
 	 * Creates a string representation of a directive. The serialization of the directive includes the ending newline character.
 	 * @param name The name of the directive.
 	 * @param value The value of the directive.
+	 * @throws IOException Thrown if an I/O error occurred.
 	 * @return A string representing the given directive.
 	 */
 	public String serializeDirective(final String name, final String value) throws IOException {
@@ -156,7 +158,7 @@ public class ELFF {
 	/**
 	 * Formats a directive for a log. The directive serialization includes the ending newline character.
 	 * @param stringBuilder The string builder for formatting the value.
-	 * @param field The field with which the value is associated.
+	 * @param name The field with which the value is associated.
 	 * @param value The value to write to the log, or <code>null</code> if this field has no value in the current entry.
 	 * @return The string builder with the new formatted content.
 	 * @throws ClassCastException if the given value is not compatible with the field's type
@@ -168,6 +170,7 @@ public class ELFF {
 	/**
 	 * Creates a string representation of the given entry. The serialized entry string includes the ending newline character.
 	 * @param entry The entry to serialize.
+	 * @throws IOException Thrown if an I/O error occurred.
 	 * @return A string representing the given entry.
 	 */
 	public String serializeEntry(final Entry entry) throws IOException {
