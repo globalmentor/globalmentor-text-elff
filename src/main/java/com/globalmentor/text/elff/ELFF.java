@@ -22,8 +22,9 @@ import java.text.*;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
+import static java.util.Objects.*;
+
 import static com.globalmentor.collections.Maps.*;
-import static com.globalmentor.java.Objects.*;
 import static com.globalmentor.java.StringBuilders.*;
 import static com.globalmentor.net.URIs.*;
 import static com.globalmentor.time.TimeZones.*;
@@ -98,7 +99,7 @@ public class ELFF {
 	 * @throws NullPointerException if the writer and/or the array of fields is <code>null</code>.
 	 */
 	public ELFF(final Field<?>... fields) {
-		this.fields = checkInstance(fields, "Fields cannot be null.").clone(); //store a copy of the fields so that they can't be modified later by the caller
+		this.fields = requireNonNull(fields, "Fields cannot be null.").clone(); //store a copy of the fields so that they can't be modified later by the caller
 	}
 
 	/**

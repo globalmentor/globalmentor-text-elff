@@ -16,7 +16,7 @@
 
 package com.globalmentor.text.elff;
 
-import static com.globalmentor.java.Objects.*;
+import static java.util.Objects.*;
 
 /**
  * The prefix of a field identifier of an individual field in an entry of the Extended Log File Format (ELFF).
@@ -58,6 +58,6 @@ public enum FieldIdentifierPrefix {
 	 * @throws NullPointerException if the given ID is <code>null</code>.
 	 */
 	private FieldIdentifierPrefix(final String id) {
-		this.id = checkInstance(id, "ID cannot be null."); //save the ID
+		this.id = requireNonNull(id, "ID cannot be null."); //save the ID
 	}
 }

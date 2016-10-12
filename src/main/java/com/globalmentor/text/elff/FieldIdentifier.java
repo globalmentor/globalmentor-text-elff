@@ -16,7 +16,7 @@
 
 package com.globalmentor.text.elff;
 
-import static com.globalmentor.java.Objects.*;
+import static java.util.Objects.*;
 
 /**
  * A field identifier of an individual field in an entry of the Extended Log File Format (ELFF).
@@ -92,7 +92,7 @@ public class FieldIdentifier {
 	 */
 	public FieldIdentifier(final FieldIdentifierPrefix prefix, final String identifier, final boolean isHeader) {
 		this.prefix = prefix;
-		this.identifier = checkInstance(identifier, "Identifier cannot be null.");
+		this.identifier = requireNonNull(identifier, "Identifier cannot be null.");
 		this.isHeader = isHeader;
 	}
 }
