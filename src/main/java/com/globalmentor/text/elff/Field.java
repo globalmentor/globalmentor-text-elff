@@ -18,7 +18,7 @@ package com.globalmentor.text.elff;
 
 import java.util.Date;
 
-import static com.globalmentor.java.Objects.*;
+import static java.util.Objects.*;
 
 /**
  * An individual field in an entry of the Extended Log File Format (ELFF). A field is an identifier with a specified type.
@@ -136,6 +136,6 @@ public class Field<T> extends FieldIdentifier {
 	 */
 	public Field(final FieldIdentifierPrefix prefix, final String identifier, final boolean isHeader, final FieldType type) {
 		super(prefix, identifier, isHeader); //construct the parent class
-		this.type = checkInstance(type, "Type cannot be null.");
+		this.type = requireNonNull(type, "Type cannot be null.");
 	}
 }
