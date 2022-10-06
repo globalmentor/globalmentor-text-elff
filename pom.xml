@@ -9,7 +9,7 @@
 	</parent>
 
 	<artifactId>globalmentor-text-elff</artifactId>
-	<version>0.6.0</version>
+	<version>0.6.1-SNAPSHOT</version>
 
 	<name>GlobalMentor ELFF</name>
 	<description>GlobalMentor Java Extended Log File Format (ELFF) library.</description>
