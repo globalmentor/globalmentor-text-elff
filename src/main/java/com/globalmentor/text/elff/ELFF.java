@@ -110,6 +110,7 @@ public class ELFF {
 	 * @throws IOException Thrown if an I/O error occurred.
 	 * @return A string representing the given directives.
 	 */
+	@SuppressWarnings("unchecked")
 	public String serializeDirectives(final NameValuePair<String, String>... directives) throws IOException {
 		final StringBuilder directiveStringBuilder = new StringBuilder(); //create a string builder for assembling the directives
 		//log predefined directives
